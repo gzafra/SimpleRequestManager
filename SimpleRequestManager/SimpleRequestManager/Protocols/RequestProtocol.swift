@@ -9,9 +9,7 @@
 import Foundation
 
 
-struct EmptyBody: Decodable {}
-
-protocol RequestProtocol {
+public protocol RequestProtocol {
     
     /// Associated type use to decode the response received (Must conform to Decodable)
     associatedtype ResponseType: Decodable
@@ -35,7 +33,7 @@ protocol RequestProtocol {
     var queryString: [String: String]? { get }
 }
 
-extension RequestProtocol {
+public extension RequestProtocol {
     
 
     func processResponseData(data: Data?) throws -> ResponseType {

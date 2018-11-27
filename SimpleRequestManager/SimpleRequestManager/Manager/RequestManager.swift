@@ -8,9 +8,9 @@
 
 import Foundation
 
-class RequestManager: RequestManagerProtocol {
+open class RequestManager: RequestManagerProtocol {
     
-    private static var defaultConfiguration: URLSessionConfiguration = {
+    public static var defaultConfiguration: URLSessionConfiguration = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 10
         configuration.timeoutIntervalForResource = 30
@@ -21,18 +21,18 @@ class RequestManager: RequestManagerProtocol {
     
     
     // MARK: - Lifecycle
-    init(sessionConfiguration: URLSessionConfiguration = RequestManager.defaultConfiguration) {
+    public init(sessionConfiguration: URLSessionConfiguration = RequestManager.defaultConfiguration) {
         self.sessionConfiguration = sessionConfiguration
     }
 
     // MARK: - Request Methods
-    func send<T: RequestProtocol>(request: T, after: TimeInterval) {
+    open func send<T: RequestProtocol>(request: T, after: TimeInterval) {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + after) {
             self.send(request: request)
         }
     }
     
-    func send<T: RequestProtocol>(request: T) {
+    open func send<T: RequestProtocol>(request: T) {
 
         guard var url = request.url else {
             assertionFailure("Error creating URL for endpoint: \(String(describing: request))")

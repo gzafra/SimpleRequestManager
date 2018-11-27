@@ -1,5 +1,5 @@
 //
-//  HTTPMethod.swift
+//  EmptyBody.swift
 //  SimpleRequestManager
 //
 //  Created by Guillermo Zafra on 27/11/2018.
@@ -8,11 +8,4 @@
 
 import Foundation
 
-public enum HTTPMethod: String {
-    case get
-    case head
-    case post
-    case put
-    case patch
-    case delete
-}
+public struct EmptyBody: Decodable {}

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ResultError: Error {
+public enum ResultError: Error {
 
     case serverError(code: HTTPCode)
     case unknownError

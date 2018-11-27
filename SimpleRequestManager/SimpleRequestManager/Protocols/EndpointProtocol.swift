@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol EndpointProtocol: RawRepresentable where RawValue == String {
+public protocol EndpointProtocol: RawRepresentable where RawValue == String {
     var baseUrl: String { get }
     var url: URL? { get }
 }
 
-extension EndpointProtocol {
+public extension EndpointProtocol {
     
     init?(rawValue: String) {
         assertionFailure("init(rawValue:) not implemented")

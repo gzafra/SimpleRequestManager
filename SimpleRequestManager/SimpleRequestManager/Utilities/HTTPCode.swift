@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HTTPCode {
+public struct HTTPCode {
     let intValue: Int
     
     /// Informational - Request received, continuing process.

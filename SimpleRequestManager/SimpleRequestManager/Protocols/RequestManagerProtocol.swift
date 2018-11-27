@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol RequestManagerProtocol {
+public protocol RequestManagerProtocol {
     func send<T: RequestProtocol>(request: T, after: TimeInterval)
     func send<T: RequestProtocol>(request: T)
 }

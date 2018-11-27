@@ -18,6 +18,7 @@
 		B6D7A27621AD87B20063D286 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7A26F21AD87B20063D286 /* RequestProtocol.swift */; };
 		B6D7A27721AD87B20063D286 /* RequestManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7A27021AD87B20063D286 /* RequestManagerProtocol.swift */; };
 		B6D7A27A21AD87CA0063D286 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7A27921AD87CA0063D286 /* HTTPMethod.swift */; };
+		B6D7A2C221AD968A0063D286 /* EmptyBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7A2C121AD968A0063D286 /* EmptyBody.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		B6D7A26F21AD87B20063D286 /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		B6D7A27021AD87B20063D286 /* RequestManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManagerProtocol.swift; sourceTree = "<group>"; };
 		B6D7A27921AD87CA0063D286 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		B6D7A2C121AD968A0063D286 /* EmptyBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyBody.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +89,10 @@
 		B6D7A23D21AD85D60063D286 /* SimpleRequestManager */ = {
 			isa = PBXGroup;
 			children = (
+				B6D7A2C421AD96B80063D286 /* Manager */,
+				B6D7A2C321AD96A70063D286 /* Entities */,
 				B6D7A27821AD87B90063D286 /* Utilities */,
-				B6D7A26D21AD87B20063D286 /* EndpointProtocol.swift */,
 				B6D7A26E21AD87B20063D286 /* Protocols */,
-				B6D7A26A21AD87B20063D286 /* RequestManager.swift */,
-				B6D7A26921AD87B10063D286 /* Result.swift */,
-				B6D7A26C21AD87B20063D286 /* ResultError.swift */,
 				B6D7A23E21AD85D60063D286 /* SimpleRequestManager.h */,
 				B6D7A23F21AD85D60063D286 /* Info.plist */,
 			);
@@ -111,6 +111,7 @@
 		B6D7A26E21AD87B20063D286 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B6D7A26D21AD87B20063D286 /* EndpointProtocol.swift */,
 				B6D7A26F21AD87B20063D286 /* RequestProtocol.swift */,
 				B6D7A27021AD87B20063D286 /* RequestManagerProtocol.swift */,
 			);
@@ -124,6 +125,24 @@
 				B6D7A27921AD87CA0063D286 /* HTTPMethod.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B6D7A2C321AD96A70063D286 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7A26921AD87B10063D286 /* Result.swift */,
+				B6D7A26C21AD87B20063D286 /* ResultError.swift */,
+				B6D7A2C121AD968A0063D286 /* EmptyBody.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B6D7A2C421AD96B80063D286 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7A26A21AD87B20063D286 /* RequestManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +257,7 @@
 				B6D7A27121AD87B20063D286 /* Result.swift in Sources */,
 				B6D7A27421AD87B20063D286 /* ResultError.swift in Sources */,
 				B6D7A27521AD87B20063D286 /* EndpointProtocol.swift in Sources */,
+				B6D7A2C221AD968A0063D286 /* EmptyBody.swift in Sources */,
 				B6D7A27621AD87B20063D286 /* RequestProtocol.swift in Sources */,
 				B6D7A27A21AD87CA0063D286 /* HTTPMethod.swift in Sources */,
 				B6D7A27321AD87B20063D286 /* HTTPCode.swift in Sources */,
