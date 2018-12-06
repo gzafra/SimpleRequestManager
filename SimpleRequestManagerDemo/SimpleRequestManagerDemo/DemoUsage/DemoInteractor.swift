@@ -28,5 +28,6 @@ class DemoInteractor {
                 // Handle errr cases
             }
         }
+        requestManager.send(request: getUserRequest)
     }
 }
